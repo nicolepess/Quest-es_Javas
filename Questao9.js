@@ -13,7 +13,10 @@ while (contadorU< 3){
        break;
    }else{
            console.log("Usuario incorreto")
-        
+        for (contadorU = 1 ; contadorU <3 ; contadorU++){
+             console.log("Não há mais tentativas restantes!");
+             break;
+        }
        }
        contadorU++;
 } 
