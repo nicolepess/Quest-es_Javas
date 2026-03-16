@@ -4,21 +4,25 @@ let user= "admin";
 let senha= "1234";
 let contadorS= 0;
 let contadorU= 0;
+let usuarioCorreto = false;
 
 while (contadorU< 3){
   let usuarioDigitando = prompt("Digite seu nome de usuário: ");
    
    if(usuarioDigitando === user){
        console.log("Usuário correto!");
+     let usuarioCorreto = true;
        break;
    }else{
-           console.log("Usuario incorreto")
-        for (contadorU = 1 ; contadorU <3 ; contadorU++){
-             console.log("Não há mais tentativas restantes!");
-             break;
+           contadorU++;
+      console.log("Usuário incorreto!");
+     
+      if (contadorU === 3) {
+      console.log("Não há mais tentativas para usuário.");
+         }
         }
        }
-       contadorU++;
+       
 } 
  while (contadorS < 3){
     let tentativaSenha =  prompt("Digite sua senha: ");
@@ -27,8 +31,10 @@ while (contadorU< 3){
     console.log("Acesso liberado!");
        break;
        }else{
+      contadorS++;
            console.log("Tente novamente ");
-       }
-       contadorS++
-       
+      if(contadorS === 3)
+         console.log("Número de tentativas excedidos");
+    }
+ }   
 }
