@@ -11,7 +11,7 @@ while (contadorU< 3){
    
    if(usuarioDigitando === user){
        console.log("Usuário correto!");
-     let usuarioCorreto = true;
+      usuarioCorreto = true;
        break;
    }else{
            contadorU++;
@@ -21,9 +21,8 @@ while (contadorU< 3){
       console.log("Não há mais tentativas para usuário.");
          }
         }
-       }
-       
-} 
+       } 
+    if (usuarioCorreto) {
  while (contadorS < 3){
     let tentativaSenha =  prompt("Digite sua senha: ");
     
@@ -33,6 +32,7 @@ while (contadorU< 3){
        }else{
       contadorS++;
            console.log("Tente novamente ");
+           
       if(contadorS === 3)
          console.log("Número de tentativas excedidos");
     }
